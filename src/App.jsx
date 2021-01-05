@@ -1,5 +1,5 @@
 import './styles/tailwind.output.css';
-import NavBar from "./components/NavBar";
+import NavBar from "./components/navbar-items/NavBar";
 import {colors} from "./styles/Styles";
 
 const styles = {
