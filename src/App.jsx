@@ -1,14 +1,17 @@
 import './styles/tailwind.output.css';
 import NavBar from "./components/NavBar";
+import {colors} from "./styles/Styles";
 
 const styles = {
 	root: {
-		backgroundColor: ""
-	}
+		background: colors.background,
+		height: "100vh",
+		margin: 0,
+	},
 }
 
 const App = () => (
-	<div className={styles.root}>
+	<div style={styles.root}>
 		<NavBar/>
 	</div>
 );
