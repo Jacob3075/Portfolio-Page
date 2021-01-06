@@ -2,6 +2,7 @@ import './styles/tailwind.output.css';
 import NavBar from "./components/navbar-items/NavBar";
 import {colors} from "./styles/Styles";
 import HeroSection from "./components/HeroSection";
+import CategorySelector from "./components/CategorySelector";
 
 const styles = {
 	root: {
@@ -13,9 +14,9 @@ const styles = {
 		height: "100vh",
 	},
 	section2: {
-		height: "100vh",
 		paddingLeft: 200,
-		paddingRight: 200
+		paddingRight: 200,
+		paddingBottom: 200,
 	},
 }
 
@@ -26,6 +27,7 @@ const App = () => (
 			<HeroSection/>
 		</div>
 		<div style={styles.section2}>
+			<CategorySelector/>
 		</div>
 	</div>
 );
