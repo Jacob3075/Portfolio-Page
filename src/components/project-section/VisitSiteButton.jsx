@@ -5,24 +5,25 @@ const styles = {
 	root: {
 		backgroundColor: "#5E5E5E",
 		height: "60px",
+		width: "200px",
 		borderRadius: "30px",
-		borderWidth: "1px",
-		borderStyle: "solid",
-		borderColor: colors.primary,
 		fontSize: "18px",
 		fontWeight: "bold",
 		textAlign: "center",
 		verticalAlign: "middle",
 		lineHeight: "60px",
+		borderWidth: "1px",
+		borderStyle: "solid",
+		borderColor: colors.primary,
 	},
 }
 
-const ViewSourceCodeButton = ({sourceCodeLink, fullWidth}) => {
+const VisitSiteButton = ({webSiteLink}) => {
 	return (
-		<div style={{...styles.root, width: fullWidth ? "300px" : "200px"}}>
-			View Source Code
-		</div>
+			<div style={styles.root}>
+				View Source Code
+			</div>
 	);
 };
 
-export default ViewSourceCodeButton;
+export default VisitSiteButton;

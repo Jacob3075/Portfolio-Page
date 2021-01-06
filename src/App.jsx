@@ -1,4 +1,3 @@
-import './styles/tailwind.output.css';
 import NavBar from "./components/navbar-items/NavBar";
 import {colors} from "./styles/Styles";
 import HeroSection from "./components/HeroSection";

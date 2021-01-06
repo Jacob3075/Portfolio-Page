@@ -7,7 +7,8 @@ export const projects = [
 		"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum pulvinar ut vitae posuere interdum. Iaculis vel adipiscing sapien, sapien, nunc quis varius lacus. Eu venenatis augue leo blandit pulvinar.",
 		"Image",
 		["java", "javascript"],
-		"Link"
+		"Link",
+		""
 	),
 	new Project(
 		2,
@@ -15,7 +16,8 @@ export const projects = [
 		"Description",
 		"Image",
 		["java"],
-		"Link"
+		"Link",
+		""
 	),
 	new Project(
 		3,
@@ -23,6 +25,7 @@ export const projects = [
 		"Description",
 		"Image",
 		["javascript"],
-		"Link"
+		"Link",
+		""
 	),
 ];

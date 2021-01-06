@@ -1,7 +1,7 @@
 import React from 'react';
 import {colors} from "../../styles/Styles";
 import LanguageIcons from "./LanguageIcon";
-import ViewSourceCodeButton from "./ViewSourceCodeButton";
+import Links from "./Links";
 
 const styles = {
 	even: {
@@ -12,10 +12,10 @@ const styles = {
 		borderColor: colors.primary,
 		borderRadius: "50px",
 		height: "300px",
-		width: "1000px",
+		width: "1050px",
 	},
 	evenLeftSide: {
-		display: "block"
+		width: "550px",
 	},
 	evenRightSide: {
 		display: "flex",
@@ -23,7 +23,7 @@ const styles = {
 		flexGrow: 1,
 		alignItems: "center",
 		justifyContent: "center",
-		// backgroundColor: "white"
+		// backgroundColor: "blue"
 	},
 	evenProjectName: {
 		position: "relative",
@@ -34,17 +34,15 @@ const styles = {
 	},
 	evenProjectDescription: {
 		color: colors.secondary,
-		position: "relative",
 		fontSize: 24,
 		fontWeight: "regular",
 		lineHeight: "29px",
-		left: "45px",
-		top: "30px",
-		width: "520px"
+		marginLeft: "45px",
+		marginTop: "40px",
 	},
 };
 
-const ProjectComponent = ({id, name, description, image, projectStack, sourceCodeLink}) => {
+const ProjectComponent = ({id, name, description, image, projectStack, sourceCodeLink, webSiteLink}) => {
 	return (
 		<div style={styles.even}>
 			<div style={styles.evenLeftSide}>
@@ -57,7 +55,7 @@ const ProjectComponent = ({id, name, description, image, projectStack, sourceCod
 			</div>
 			<div style={styles.evenRightSide}>
 				<LanguageIcons projectStack={projectStack}/>
-				<ViewSourceCodeButton/>
+				<Links sourceCodeLink={sourceCodeLink} webSiteLink={webSiteLink}/>
 			</div>
 		</div>
 	);
