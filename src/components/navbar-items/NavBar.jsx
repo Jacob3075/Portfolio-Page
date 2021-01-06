@@ -1,6 +1,5 @@
 import React from 'react';
 import SocialLinks from "./SocialLinks";
-import {colors} from "../../styles/Styles";
 
 const styles = {
 	root: {
@@ -11,7 +10,6 @@ const styles = {
 		paddingTop: 25,
 	},
 	titleStyle: {
-		color: colors.primary,
 		fontSize: 24,
 		fontWeight: "600"
 	}
