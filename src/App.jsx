@@ -3,6 +3,7 @@ import NavBar from "./components/navbar-items/NavBar";
 import {colors} from "./styles/Styles";
 import HeroSection from "./components/HeroSection";
 import CategorySelector from "./components/CategorySelector";
+import ProjectsList from "./components/project-section/ProjectsList";
 
 const styles = {
 	root: {
@@ -28,6 +29,7 @@ const App = () => (
 		</div>
 		<div style={styles.section2}>
 			<CategorySelector/>
+			<ProjectsList/>
 		</div>
 	</div>
 );
