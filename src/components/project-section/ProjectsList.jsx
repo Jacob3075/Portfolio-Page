@@ -9,7 +9,7 @@ const styles = {
 const ProjectsList = () => {
 
 	const projectComponents = projects.map(project =>
-		<ProjectComponent key={project.id} {...project}/>
+		<ProjectComponent key={project.id} project={project}/>
 	);
 
 	return (

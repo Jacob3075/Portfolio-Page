@@ -19,11 +19,13 @@ const styles = {
 }
 
 const VisitSiteButton = ({webSiteLink}) => {
-	return (
+	return webSiteLink === null
+		? (<></>)
+		: (
 			<div style={styles.root}>
 				View Source Code
 			</div>
-	);
+		);
 };
 
 export default VisitSiteButton;

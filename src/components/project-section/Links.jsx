@@ -13,7 +13,7 @@ const styles = {
 const Links = ({sourceCodeLink, webSiteLink}) => {
 	return (
 		<div style={styles.root}>
-			<ViewSourceCodeButton sourceCodeLink={sourceCodeLink} fullWidth={!!webSiteLink}/>
+			<ViewSourceCodeButton sourceCodeLink={sourceCodeLink} fullWidth={webSiteLink === null}/>
 			<VisitSiteButton webSiteLink={webSiteLink}/>
 		</div>
 	);
