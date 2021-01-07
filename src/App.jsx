@@ -4,7 +4,7 @@ import {colors} from "./styles/Styles";
 import HeroSection from "./components/HeroSection";
 import CategorySelector from "./components/CategorySelector";
 import ProjectsList from "./components/project-section/ProjectsList";
-import DesignsList from "./components/DesignsList";
+import DesignsList from "./components/design-section/DesignsList";
 
 const styles = {
 	root: {
