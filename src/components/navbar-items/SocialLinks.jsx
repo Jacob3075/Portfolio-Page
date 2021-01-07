@@ -8,18 +8,44 @@ import {ReactComponent as EmailIcon} from "../../images/At Symbol.svg"
 
 const styles = {
 	root: {
-		display: "flex"
+		display: "flex",
+		alignItems: "center",
+		justifyContent: "center",
 	}
 }
 
 const SocialLinks = () => {
 	return (
 		<div style={styles.root}>
-			<SocialLink title="Email" icon={<EmailIcon fill={colors.primary} stroke={colors.primary}/>}/>
+			<SocialLink
+				title="Email"
+				icon={
+					<EmailIcon
+						fill={colors.primary}
+						stroke={colors.primary}
+					/>
+				}
+			/>
 			<Divider/>
-			<SocialLink title="LinkedIn" icon={<LinkedInIcon fill={colors.primary} stroke={colors.primary}/>}/>
+			<SocialLink
+				title="LinkedIn"
+				icon={
+					<LinkedInIcon
+						fill={colors.primary}
+						stroke={colors.primary}
+					/>
+				}
+			/>
 			<Divider/>
-			<SocialLink title="Github" icon={<GitHubIcon fill={colors.primary} stroke={colors.primary}/>}/>
+			<SocialLink
+				title="Github"
+				icon={
+					<GitHubIcon
+						fill={colors.primary}
+						stroke={colors.primary}
+					/>
+				}
+			/>
 		</div>
 	);
 };
