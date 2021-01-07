@@ -1,8 +1,10 @@
+import {useState} from 'react';
 import NavBar from "./components/navbar-items/NavBar";
 import {colors} from "./styles/Styles";
 import HeroSection from "./components/HeroSection";
 import CategorySelector from "./components/CategorySelector";
 import ProjectsList from "./components/project-section/ProjectsList";
+import DesignsList from "./components/DesignsList";
 
 const styles = {
 	root: {
@@ -20,17 +22,23 @@ const styles = {
 	},
 }
 
-const App = () => (
-	<div style={styles.root}>
-		<div style={styles.section1}>
-			<NavBar/>
-			<HeroSection/>
+const App = () => {
+	const [category, setCategory] = useState(1);
+
+	return (
+		<div style={styles.root}>
+			<div style={styles.section1}>
+				<NavBar/>
+				<HeroSection/>
+			</div>
+			<div style={styles.section2}>
+				<CategorySelector category={category} setCategory={setCategory}/>
+				{category === 1
+					? <ProjectsList/>
+					: <DesignsList/>}
+			</div>
 		</div>
-		<div style={styles.section2}>
-			<CategorySelector/>
-			<ProjectsList/>
-		</div>
-	</div>
-);
+	);
+};
 
 export default App;

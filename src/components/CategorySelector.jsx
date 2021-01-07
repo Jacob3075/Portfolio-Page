@@ -1,18 +1,32 @@
 import React from 'react';
 
 const styles = {
-	display: "flex",
-	justifyContent: "space-around",
-	fontSize: 48,
-	fontWeight: "bold",
-	fontFamily: "montserrat"
+	root: {
+		display: "flex",
+		justifyContent: "space-around",
+		fontSize: 48,
+		fontWeight: "bold",
+		fontFamily: "montserrat"
+	},
+	button: {
+		cursor: "pointer",
+	},
+	selected: {},
 }
-
-const CategorySelector = () => {
+const CategorySelector = ({category, setCategory}) => {
 	return (
-		<div style={styles}>
-			<p>Projects</p>
-			<p>UI/UX Designs</p>
+		<div style={styles.root}>
+			<p
+				onClick={() => setCategory(1)}
+				style={{...styles.button, textDecoration: category === 1 ? "underline" : ""}}
+			>
+				Projects
+			</p>
+			<p
+				onClick={() => setCategory(2)}
+				style={{...styles.button, textDecoration: category === 2 ? "underline" : ""}}			>
+				UI/UX Designs
+			</p>
 		</div>
 	);
 };
