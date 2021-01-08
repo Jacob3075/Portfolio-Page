@@ -1,56 +1,15 @@
 import React from 'react';
 import LanguageIcons from "./LanguageIcon";
 import Links from "./Links";
-import {colors} from "../../styles/Styles";
-
-const styles = {
-	root: {
-		display: "flex",
-		marginBottom: "70px",
-		borderWidth: "1px",
-		borderStyle: "solid",
-		borderColor: colors.primary,
-		borderRadius: "50px",
-		height: "300px",
-		width: "1050px",
-	},
-	leftSide: {
-		width: "550px",
-	},
-	rightSide: {
-		display: "flex",
-		flexDirection: "column",
-		flexGrow: 1,
-		alignItems: "center",
-		justifyContent: "center",
-		// backgroundColor: "blue"
-	},
-	projectName: {
-		position: "relative",
-		fontSize: 48,
-		fontWeight: "bold",
-		textAlign: "center",
-		left: "45px",
-		top: "30px",
-		paddingRight: "3em"
-	},
-	projectDescription: {
-		color: colors.secondary,
-		fontSize: 24,
-		fontWeight: "regular",
-		lineHeight: "29px",
-		marginLeft: "45px",
-		marginTop: "40px",
-	},
-};
+import {evenCardStyles} from "../../styles/ProjectSection";
 
 const EvenProjectCard = ({name, description, projectStack, sourceCodeLink, webSiteLink}) => {
 	const leftSideEven = (
 		<>
-			<div style={styles.projectName}>
+			<div style={evenCardStyles.projectName}>
 				{name}
 			</div>
-			<div style={styles.projectDescription}>
+			<div style={evenCardStyles.projectDescription}>
 				{description}
 			</div>
 		</>
@@ -64,11 +23,11 @@ const EvenProjectCard = ({name, description, projectStack, sourceCodeLink, webSi
 	);
 
 	return (
-		<div style={styles.root}>
-			<div style={styles.leftSide}>
+		<div style={evenCardStyles.root}>
+			<div style={evenCardStyles.leftSide}>
 				{leftSideEven}
 			</div>
-			<div style={styles.rightSide}>
+			<div style={evenCardStyles.rightSide}>
 				{rightSideEven}
 			</div>
 		</div>

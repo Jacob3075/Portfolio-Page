@@ -1,16 +1,11 @@
 import React from 'react';
-
-const styles = {
-	fontSize: 24,
-	fontWeight: "600",
-	paddingLeft: "0.5em",
-};
+import {socialLinkStyles} from "../../styles/NavBar";
 
 const SocialLink = ({icon, title}) => {
 	return (
 		<>
 			{icon}
-			<div style={styles}>
+			<div style={socialLinkStyles}>
 				{title}
 			</div>
 		</>

@@ -1,25 +1,20 @@
 import React from 'react';
-import {getIconByLanguage} from "../../UtilFunctions";
-
+import {getIconByLanguage} from "../../Utils";
+import {languageIconStyles} from "../../styles/ProjectSection";
 
 const LanguageIcon = ({projectStack}) => {
-	const styles = {
-		root: {
-			display: "flex",
-			marginBottom: "50px"
-		},
-		icon: {
-			paddingLeft: projectStack.length > 1 ? "25px" : "",
-			paddingRight: projectStack.length > 1 ? "25px" : "",
-		},
-	};
 
 	const icons = projectStack.map((language, index) =>
-		<div key={index} style={styles.icon}> {getIconByLanguage(language)} </div>
+		<div
+			key={index}
+			style={languageIconStyles.icon(projectStack.length)}
+		>
+			{getIconByLanguage(language)}
+		</div>
 	);
 
 	return (
-		<div style={styles.root}>
+		<div style={languageIconStyles.root}>
 			{icons}
 		</div>
 	);

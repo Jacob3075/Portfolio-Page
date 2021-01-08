@@ -1,15 +1,7 @@
 import React from 'react';
 import {designs} from "../../DesignService";
 import DesignComponent from "./DesignComponent";
-
-const styles = {
-	root: {
-		display: "grid",
-		gridTemplateColumns: "auto auto",
-		gridGap: "120px 100px",
-		marginTop: "6em",
-	},
-};
+import {designSectionStyles} from "../../styles/DesignSection";
 
 const DesignsList = () => {
 
@@ -18,7 +10,7 @@ const DesignsList = () => {
 	));
 
 	return (
-		<div style={styles.root}>
+		<div style={designSectionStyles.root}>
 			{designsComponents}
 		</div>
 	);

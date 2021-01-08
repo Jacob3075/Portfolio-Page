@@ -1,10 +1,7 @@
 import React from 'react';
 import ProjectComponent from "./ProjectComponent";
 import {projects} from "../../ProjectService";
-
-const styles = {
-	paddingTop: 100,
-};
+import {projectSectionStyles} from "../../styles/ProjectSection";
 
 const ProjectsList = () => {
 
@@ -13,7 +10,7 @@ const ProjectsList = () => {
 	);
 
 	return (
-		<div style={styles}>
+		<div style={projectSectionStyles}>
 			{projectComponents}
 		</div>
 	);

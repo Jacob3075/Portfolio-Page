@@ -1,37 +1,30 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import NavBar from "./components/navbar-items/NavBar";
-import {colors} from "./styles/Styles";
 import HeroSection from "./components/HeroSection";
 import CategorySelector from "./components/CategorySelector";
 import ProjectsList from "./components/project-section/ProjectsList";
 import DesignsList from "./components/design-section/DesignsList";
-
-const styles = {
-	root: {
-		background: colors.background,
-		color: colors.primary,
-		fontFamily: "montserrat, lato, sans-serif"
-	},
-	section1: {
-		height: "100vh",
-	},
-	section2: {
-		paddingLeft: 200,
-		paddingRight: 200,
-		paddingBottom: 200,
-	},
-}
+import {mediaQuery} from "./Utils";
+import {appStyles} from "./styles/AppStyles";
 
 const App = () => {
 	const [category, setCategory] = useState(1);
+	const [windowWidth, setWindowWidth] = useState(0);
+
+	useEffect(() => {
+		window.addEventListener('resize', () => {
+			setWindowWidth(document.body.clientWidth)
+		});
+
+	}, [])
 
 	return (
-		<div style={styles.root}>
-			<div style={styles.section1}>
+		<div style={appStyles.root}>
+			<div style={appStyles.section1}>
 				<NavBar/>
 				<HeroSection/>
 			</div>
-			<div style={styles.section2}>
+			<div style={appStyles.section2}>
 				<CategorySelector category={category} setCategory={setCategory}/>
 				{category === 1
 					? <ProjectsList/>

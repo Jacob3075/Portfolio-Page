@@ -5,18 +5,11 @@ import {colors} from "../../styles/Styles";
 import {ReactComponent as LinkedInIcon} from "../../images/Linkedin.svg"
 import {ReactComponent as GitHubIcon} from "../../images/GitHub.svg"
 import {ReactComponent as EmailIcon} from "../../images/At Symbol.svg"
-
-const styles = {
-	root: {
-		display: "flex",
-		alignItems: "center",
-		justifyContent: "center",
-	}
-}
+import {socialLinksStyles} from "../../styles/NavBar";
 
 const SocialLinks = () => {
 	return (
-		<div style={styles.root}>
+		<div style={socialLinksStyles.root}>
 			<SocialLink
 				title="Email"
 				icon={

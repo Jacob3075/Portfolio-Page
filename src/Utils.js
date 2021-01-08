@@ -12,3 +12,9 @@ export const getIconByLanguage = (language) => {
 			return (<div/>);
 	}
 };
+
+export const mediaQuery = {
+	desktop: 1200,
+	tablet: 768,
+	phone: 576,
+};
