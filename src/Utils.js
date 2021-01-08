@@ -1,5 +1,5 @@
-import {ReactComponent as JavaIcon} from "./images/JavaIcon.svg";
-import {ReactComponent as JavaScriptIcon} from "./images/JavaScriptIcon.svg";
+import { ReactComponent as JavaIcon } from "./images/JavaIcon.svg";
+import { ReactComponent as JavaScriptIcon } from "./images/JavaScriptIcon.svg";
 
 export const getIconByLanguage = (language) => {
 	language = language.toLowerCase();
@@ -15,6 +15,6 @@ export const getIconByLanguage = (language) => {
 
 export const mediaQuery = {
 	desktop: 1200,
-	tablet: 768,
-	phone: 576,
+	tablet : 768,
+	phone  : 576,
 };

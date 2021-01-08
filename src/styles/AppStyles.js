@@ -1,30 +1,30 @@
-import {colors} from "./Styles";
+import { colors } from "./Styles";
 
 export const appStyles = {
-	root: {
+	root    : {
 		background: colors.background,
-		color: colors.primary,
+		color     : colors.primary,
 		fontFamily: "montserrat, lato, sans-serif"
 	},
 	section1: {
 		height: "100vh",
 	},
 	section2: {
-		paddingLeft: "12em",
-		paddingRight: "12em",
+		paddingLeft  : "12em",
+		paddingRight : "12em",
 		paddingBottom: "12em",
 	},
 }
 
 export const categorySelectorStyles = {
-	root: {
-		display: "flex",
+	root    : {
+		display       : "flex",
 		justifyContent: "space-around",
-		fontSize: 48,
-		fontWeight: "bold",
-		fontFamily: "montserrat"
+		fontSize      : 48,
+		fontWeight    : "bold",
+		fontFamily    : "montserrat"
 	},
-	button: {
+	button  : {
 		cursor: "pointer",
 	},
 	selected: {},

@@ -1,11 +1,11 @@
-import {Project} from "./Project";
+import { Project } from "./Project";
 
 export const projects = [
 	new Project(
 		0,
 		"Name",
 		"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum pulvinar ut vitae posuere interdum. Iaculis vel adipiscing sapien, sapien, nunc quis varius lacus. Eu venenatis augue leo blandit pulvinar.",
-		["java", "javascript"],
+		[ "java", "javascript" ],
 		"Link",
 		null
 	),
@@ -13,7 +13,7 @@ export const projects = [
 		1,
 		"Name",
 		"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum pulvinar ut vitae posuere interdum. Iaculis vel adipiscing sapien, sapien, nunc quis varius lacus. Eu venenatis augue leo blandit pulvinar.",
-		["java"],
+		[ "java" ],
 		"Link",
 		""
 	),
@@ -21,7 +21,7 @@ export const projects = [
 		2,
 		"Name",
 		"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum pulvinar ut vitae posuere interdum. Iaculis vel adipiscing sapien, sapien, nunc quis varius lacus. Eu venenatis augue leo blandit pulvinar.",
-		["javascript"],
+		[ "javascript" ],
 		"Link",
 		""
 	),

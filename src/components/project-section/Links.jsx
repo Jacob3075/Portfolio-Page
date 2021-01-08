@@ -1,13 +1,13 @@
 import React from 'react';
 import ViewSourceCodeButton from "./ViewSourceCodeButton";
 import VisitSiteButton from "./VisitSiteButton";
-import {linkStyles} from "../../styles/ProjectSection";
+import { linkStyles } from "../../styles/ProjectSection";
 
-const Links = ({sourceCodeLink, webSiteLink}) => {
+const Links = ({ sourceCodeLink, webSiteLink }) => {
 	return (
-		<div style={linkStyles.root}>
-			<ViewSourceCodeButton sourceCodeLink={sourceCodeLink} fullWidth={webSiteLink === null}/>
-			<VisitSiteButton webSiteLink={webSiteLink}/>
+		<div style={ linkStyles.root }>
+			<ViewSourceCodeButton sourceCodeLink={ sourceCodeLink } fullWidth={ webSiteLink === null }/>
+			<VisitSiteButton webSiteLink={ webSiteLink }/>
 		</div>
 	);
 };
