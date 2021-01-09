@@ -1,10 +1,14 @@
+import { mediaQuery, windowDimensions } from "../Utils";
+
 export const navBarStyles = {
-	root      : {
-		display       : "flex",
-		justifyContent: "space-between",
-		paddingLeft   : 200,
-		paddingRight  : 200,
-		paddingTop    : 25,
+	root      : (width, height) => {
+		return {
+			display       : "flex",
+			justifyContent: "space-between",
+			paddingLeft   : width > mediaQuery.desktop ? "10rem" : "5rem",
+			paddingRight  : width > mediaQuery.desktop ? "10rem" : "5rem",
+			paddingTop    : "1em",
+		}
 	},
 	titleStyle: {
 		fontSize  : 24,

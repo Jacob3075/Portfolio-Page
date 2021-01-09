@@ -1,22 +1,13 @@
-import { useState, useEffect } from 'react';
+import { useState} from 'react';
 import NavBar from "./components/navbar-items/NavBar";
 import HeroSection from "./components/HeroSection";
 import CategorySelector from "./components/CategorySelector";
 import ProjectsList from "./components/project-section/ProjectsList";
 import DesignsList from "./components/design-section/DesignsList";
-import { mediaQuery } from "./Utils";
 import { appStyles } from "./styles/AppStyles";
 
 const App = () => {
 	const [ category, setCategory ] = useState(1);
-	const [ windowWidth, setWindowWidth ] = useState(0);
-
-	useEffect(() => {
-		window.addEventListener('resize', () => {
-			setWindowWidth(document.body.clientWidth)
-		});
-
-	}, [])
 
 	return (
 		<div style={ appStyles.root }>
