@@ -1,5 +1,35 @@
 import { colors } from "./Styles";
 
+const getTitleFontSize = (width) => {
+	if (width > 1500) {
+		return 100;
+	} else if (width > 1200) {
+		return 70;
+	} else if (width > 1000) {
+		return 80;
+	} else if (width > 800) {
+		return 60;
+	} else if (width > 500) {
+		return 40;
+	} else {
+		return 30;
+	}
+};
+
+const getSubTitleFontSize = (width) => {
+	if (width > 1500) {
+		return 36;
+	} else if (width > 1200) {
+		return 30;
+	} else if (width > 1000) {
+		return 30;
+	} else if (width > 800) {
+		return 26;
+	} else {
+		return 20;
+	}
+};
+
 export const heroSectionStyles = {
 	root         : {
 		display       : 'flex',
@@ -7,18 +37,22 @@ export const heroSectionStyles = {
 		alignItems    : 'center',
 		justifyContent: 'center',
 	},
-	title        : {
-		position  : "absolute",
-		top       : "20%",
-		fontSize  : 120,
-		fontWeight: "bold",
+	title        : (width) => {
+		return {
+			position  : "absolute",
+			top       : "20%",
+			fontSize  : getTitleFontSize(width),
+			fontWeight: "bold",
+		}
 	},
-	subTitle     : {
-		color     : colors.secondary,
-		position  : "absolute",
-		top       : "38%",
-		fontSize  : 36,
-		fontWeight: "600"
+	subTitle     : (width) => {
+		return {
+			color     : colors.secondary,
+			position  : "absolute",
+			top       : width > 800 ? "38%" : "30%",
+			fontSize  : getSubTitleFontSize(width),
+			fontWeight: "600"
+		}
 	},
 	aboutMeStyles: {
 		color     : colors.secondary,

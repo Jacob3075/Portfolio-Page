@@ -5,15 +5,20 @@ export const projectSectionStyles = {
 };
 
 export const evenCardStyles = {
-	root              : {
-		display     : "flex",
-		marginBottom: "4.5em",
-		borderWidth : "1px",
-		borderStyle : "solid",
-		borderColor : colors.primary,
-		borderRadius: "3.125em",
-		height      : "18.75em",
-		width       : "65.625em",
+	root              : (width) => {
+		return {
+			display     : "flex",
+			marginBottom: "4.5em",
+			borderWidth : "1px",
+			borderStyle : "solid",
+			borderColor : colors.primary,
+			borderRadius: "3.125em",
+			height      : "18.75em",
+			// width       : "65.625em",
+			width       : width > 1000
+			              ? "65.625em"
+			              : "800px",
+		}
 	},
 	leftSide          : {
 		width: "34.375em",

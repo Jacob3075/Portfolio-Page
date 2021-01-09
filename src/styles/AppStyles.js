@@ -2,6 +2,7 @@ import { colors } from "./Styles";
 
 export const appStyles = {
 	root    : {
+		width: "100vw",
 		background: colors.background,
 		color     : colors.primary,
 		fontFamily: "montserrat, lato, sans-serif"

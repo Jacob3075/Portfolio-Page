@@ -1,4 +1,4 @@
-import { useState} from 'react';
+import { useState } from 'react';
 import NavBar from "./components/navbar-items/NavBar";
 import HeroSection from "./components/HeroSection";
 import CategorySelector from "./components/CategorySelector";

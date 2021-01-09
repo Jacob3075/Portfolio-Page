@@ -1,13 +1,16 @@
 import React from 'react';
 import { heroSectionStyles } from "../styles/HeroSection";
+import { useWindowSize } from "../Utils";
 
 const HeroSection = () => {
+	const [ width, height ] = useWindowSize();
+
 	return (
 		<div style={ heroSectionStyles.root }>
-			<div style={ heroSectionStyles.title }>
+			<div style={ heroSectionStyles.title(width) }>
 				HERO SECTION TITLE
 			</div>
-			<div style={ heroSectionStyles.subTitle }>
+			<div style={ heroSectionStyles.subTitle(width) }>
 				HERO SECTION SUBTITLE
 			</div>
 			<div style={ heroSectionStyles.aboutMeStyles }>

@@ -4,11 +4,12 @@ import { ReactComponent as JavaScriptIcon } from "./images/JavaScriptIcon.svg";
 import React, { useLayoutEffect, useState } from 'react';
 
 export const useWindowSize = () => {
-	const [size, setSize] = useState([0, 0]);
+	const [ size, setSize ] = useState([ 0, 0 ]);
 	useLayoutEffect(() => {
-		function updateSize() {
-			setSize([window.innerWidth, window.innerHeight]);
-		}
+		const updateSize = () => {
+			setSize([ window.outerWidth, window.innerHeight ]);
+		};
+
 		window.addEventListener('resize', updateSize);
 		updateSize();
 		return () => window.removeEventListener('resize', updateSize);
